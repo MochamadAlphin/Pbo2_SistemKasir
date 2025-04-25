@@ -24,7 +24,7 @@ public class Produk {
         this.kategori = kategori;
     }
 
-    // Getters
+   
     public int getIdProduk() { return idProduk; }
     public String getNamaProduk() { return namaProduk; }
     public int getStok() { return stok; }
