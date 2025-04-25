@@ -38,7 +38,7 @@ public class User_Operations {
                                 rs.getString("role"));
             }
         }
-        return null; // Jika tidak ditemukan
+        return null; 
     }
 
     public void updateUser(User user) throws SQLException {
