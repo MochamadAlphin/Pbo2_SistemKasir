@@ -62,7 +62,7 @@ public class Produk_Operations {
                                   rs.getString("kategori"));
             }
         }
-        return null; // Jika tidak ditemukan
+        return null; 
     }
 
     public List<Produk> getAllProduk() throws SQLException {
