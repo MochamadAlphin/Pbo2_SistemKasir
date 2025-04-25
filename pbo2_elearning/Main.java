@@ -26,7 +26,7 @@ public class Main {
                 System.out.println("1. Login");
                 System.out.println("2. Exit");
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
 
                 if (choice == 1) {
                     System.out.print("Username: ");
@@ -44,13 +44,13 @@ public class Main {
                                 System.out.println("2. Kelola Transaksi");
                                 System.out.println("3. Logout");
                                 int adminChoice = scanner.nextInt();
-                                scanner.nextLine(); // Consume newline
+                                scanner.nextLine(); 
                                 if (adminChoice == 1) {
                                     manageProducts(scanner, produkOps);
                                 } else if (adminChoice == 2) {
                                     manageTransactions(scanner, transaksiOps);
                                 } else if (adminChoice == 3) {
-                                    break; // Logout
+                                    break; 
                                 }
                             }
                         }
@@ -58,7 +58,7 @@ public class Main {
                         System.out.println("Login gagal! Username atau password salah.");
                     }
                 } else if (choice == 2) {
-                    break; // Exit
+                    break; 
                 }
             }
         } catch (SQLException e) {
@@ -76,7 +76,7 @@ public class Main {
             System.out.println("4. Lihat Produk");
             System.out.println("5. Kembali");
             int produkChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             if (produkChoice == 1) {
                 System.out.print("Nama Produk: ");
@@ -85,7 +85,7 @@ public class Main {
                 int stok = scanner.nextInt();
                 System.out.print("Harga: ");
                 double harga = scanner.nextDouble();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
                 System.out.print("Kategori: ");
                 String kategori = scanner.nextLine();
 
@@ -98,7 +98,7 @@ public class Main {
             } else if (produkChoice == 2) {
                 System.out.print("ID Produk yang ingin diupdate: ");
                 int idProduk = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
                 Produk produk = produkOps.getProduk(idProduk);
                 if (produk != null) {
                     System.out.print("Nama Produk Baru: ");
@@ -107,7 +107,7 @@ public class Main {
                     int stok = scanner.nextInt();
                     System.out.print("Harga Baru: ");
                     double harga = scanner.nextDouble();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine(); 
                     System.out.print("Kategori Baru: ");
                     String kategori = scanner.nextLine();
 
@@ -138,7 +138,7 @@ public class Main {
                     }
                 }
             } else if (produkChoice == 5) {
-                break; // Kembali ke menu admin
+                break; 
             }
         }
     }
@@ -150,7 +150,7 @@ public class Main {
             System.out.println("3. Hapus Transaksi");
             System.out.println("4. Kembali");
             int transaksiChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             if (transaksiChoice == 1) {
                 System.out.print("ID Produk: ");
@@ -174,7 +174,7 @@ public class Main {
             } else if (transaksiChoice == 3) {
                 System.out.print("ID Transaksi yang ingin dihapus: ");
                 int idTransaksi = scanner.nextInt();
-                // Cek apakah transaksi ada sebelum menghapus
+          
                 List<Transaksi> transaksiList = transaksiOps.getAllTransaksi();
                 boolean found = false;
                 for (Transaksi t : transaksiList) {
@@ -190,7 +190,7 @@ public class Main {
                     System.out.println("Transaksi tidak ditemukan.");
                 }
             } else if (transaksiChoice == 4) {
-                break; // Kembali ke menu admin
+                break; 
             }
         }
     }
